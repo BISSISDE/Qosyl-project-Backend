@@ -19,7 +19,7 @@ app.use("/uploads", (req, res, next) => {
   res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
   next();
 });
-
+app.set("trust proxy", 1);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(
