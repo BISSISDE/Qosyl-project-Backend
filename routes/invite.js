@@ -25,7 +25,7 @@ router.post("/", authMiddleware, async (req, res) => {
       [goalId, userId]
     );
 
-    const link = `http://localhost:3000/invite/${token}`;
+    const link = `https://qosyl-project-backend.onrender.com/invite/${token}`;
     res.json({ link });
   } catch (err) {
     console.error("DB error:", err);
