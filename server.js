@@ -29,7 +29,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5176",
-      "https://qosyl-project-frontend.vercel.app/",
+      "https://qosyl-project-frontend.vercel.app",
     ],
     credentials: true,
   })
