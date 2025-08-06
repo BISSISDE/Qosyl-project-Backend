@@ -23,7 +23,7 @@ const createInvite = async (req, res, next) => {
       [invite.id, creatorId]
     );
 
-    const inviteLink = `http://localhost:5176/invite/${token}`;
+    const inviteLink = `https://qosyl-project-frontend.vercel.app/invite/${token}`;
     res.json({ inviteLink, goal: invite });
   } catch (err) {
     next(err);
