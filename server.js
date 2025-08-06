@@ -15,8 +15,8 @@ app.use("/api", limiter);
 const path = require("path");
 app.use("/uploads", (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", [
-    "http://localhost:5176",
     "https://qosyl-project-frontend.vercel.app/",
+    "http://localhost:5176",
   ]);
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
