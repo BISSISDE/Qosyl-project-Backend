@@ -25,8 +25,8 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(
   cors({
-    origin: "https://qosyl-project-frontend.vercel.app",
-    credentials: true,
+    origin:
+      "https://qosyl-project-frontend.vercel.app",
   })
 );
 app.use("/api", profileRouter);
