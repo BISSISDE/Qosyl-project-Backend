@@ -18,7 +18,7 @@ router.post("/ask", async (req, res) => {
     );
 
     const malimet = await otinish.json();
-    res.json(malimet);
+    res.status(201).json({ message: "Malimet", data: malimet });
   } catch (err) {
     console.error("Gemini API error:", err);
     res.status(500).json({ error: "Something went wrong" });
