@@ -9,7 +9,7 @@ router.post("/ask", async (req, res) => {
 
   try {
     const otinish = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key==${GEMINI_API_KEY}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -18,7 +18,7 @@ router.post("/ask", async (req, res) => {
     );
 
     const malimet = await otinish.json();
-    res.status(201).json({ message: "Malimet", data: malimet });
+    res.json(malimet);
   } catch (err) {
     console.error("Gemini API error:", err);
     res.status(500).json({ error: "Something went wrong" });
