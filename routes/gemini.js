@@ -1,5 +1,4 @@
 const express = require("express");
-const fetch = require("node-fetch");
 const { GEMINI_API_KEY } = require("../config/env");
 
 const router = express.Router();
