@@ -8,6 +8,7 @@ const profileRouter = require("./routes/profile");
 const inviteRoutes = require("./routes/create");
 const goalRoutes = require("./routes/goal");
 const taskRoutes = require("./routes/task");
+const geminiRoutes = require('./routes/gemini')
 const app = express();
 app.use(express.json());
 app.use(helmet());
@@ -32,6 +33,7 @@ app.use(
 app.use("/api", profileRouter);
 app.use("/api/auth", authRoutes);
 app.use("/api/invite", inviteRoutes);
+app.use("/api/gemini", geminiRoutes);
 app.use("/api/goal", goalRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/secure", authMiddleware, (req, res) => {
