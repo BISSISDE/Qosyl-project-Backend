@@ -2,6 +2,7 @@ const express = require("express");
 const { GEMINI_API_KEY } = require("../config/env");
 
 const router = express.Router();
+console.log("Gemini key:", GEMINI_API_KEY);
 
 router.post("/ask", async (req, res) => {
   const { contents } = req.body;
